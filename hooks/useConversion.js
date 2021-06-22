@@ -1,5 +1,4 @@
-import React, { useState, useEffect, useContext } from "react";
-//import ConvertCxt from "../context/ConverterContext";
+import { useState, useEffect } from "react";
 
 export default function useConversion(fa, ce) {
   const [total, setTotal] = useState(0);

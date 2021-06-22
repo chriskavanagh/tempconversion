@@ -1,10 +1,7 @@
 import Head from "next/head";
-//import Image from 'next/image'
-import { useState, createContext } from "react";
+import { useState } from "react";
 import styles from "../styles/Home.module.css";
-//import Conversion from "../components/Conversion";
 import useConversion from "../hooks/useConversion";
-//import ConvertCxt from "../context/ConverterContext";
 import CelsiusInput from "../components/CelsiusInput";
 import FarenheitInput from "../components/FarenheitInput";
 
@@ -19,7 +16,7 @@ export default function Home() {
   });
 
   const [total, ftotal] = useConversion(farenheit.temp, celsius.temp);
-  console.log(total, ftotal);
+  //console.log(total, ftotal);
 
   return (
     <div className={styles.container}>
@@ -38,8 +35,8 @@ export default function Home() {
         <div className={styles.right}>
           <CelsiusInput celsius={celsius} setCelsius={setCelsius} />
         </div>
-        <div>{total} Celsius</div>
-        <div>{ftotal} Farenheit</div>
+        <div className={styles.totalLeft}>{total.toFixed(2)} Celsius</div>
+        <div className={styles.totalRight}>{ftotal.toFixed(2)} Farenheit</div>
       </main>
     </div>
   );
