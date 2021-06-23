@@ -20,21 +20,23 @@
 }
 .totalLeft {
   place-self: start;
-  border: 1px black solid;
+  border: 2px rgb(150, 149, 149) solid;
+  border-top-style: none;
   padding: 3px;
   font-size: 12px;
   width: 148.5px;
   text-align: left;
   color: brown;
-  background-color: rgb(230, 230, 230);
+  background-color: rgb(250, 245, 245);
 }
 .totalRight {
   place-self: start;
-  border: 1px black solid;
+  border: 2px rgb(150, 149, 149) solid;
+  border-top-style: none;
   padding: 3px;
   font-size: 12px;
   color: brown;
   width: 148.5px;
   text-align: left;
-  background-color: rgb(230, 230, 230);
+  background-color: rgb(250, 245, 245);
 }

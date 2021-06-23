@@ -16,6 +16,7 @@ export default function FarenheitInput(props) {
         name="temp"
         value={props.farenheit.temp}
         onChange={updateField}
+        style={{ borderBottomWidth: "0px" }}
       />
     </div>
   );

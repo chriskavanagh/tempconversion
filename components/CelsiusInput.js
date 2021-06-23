@@ -16,6 +16,7 @@ export default function CelsiusInput(props) {
         name="temp"
         value={props.celsius.temp}
         onChange={updateField}
+        style={{ borderBottomWidth: "0px" }}
       />
     </div>
   );

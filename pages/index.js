@@ -1,11 +1,15 @@
 import Head from "next/head";
-import { useState } from "react";
+import { useState, useContext } from "react";
 import styles from "../styles/Home.module.css";
 import useConversion from "../hooks/useConversion";
 import CelsiusInput from "../components/CelsiusInput";
+import { ConvertCxt } from "../context/ConverterContext";
 import FarenheitInput from "../components/FarenheitInput";
 
 export default function Home() {
+  const { customer } = useContext(ConvertCxt);
+
+  // temp state
   const [farenheit, setFarenheit] = useState({
     temp: 0,
     scale: "f",
@@ -15,8 +19,8 @@ export default function Home() {
     scale: "c",
   });
 
+  // temp conversion hook
   const [total, ftotal] = useConversion(farenheit.temp, celsius.temp);
-  //console.log(total, ftotal);
 
   return (
     <div className={styles.container}>
@@ -26,7 +30,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <section>
-        <h1 style={{ color: "red" }}>Temperature Converter</h1>
+        <h1 style={{ color: "brown" }}>Temperature Converter by {customer}</h1>
       </section>
       <main className={styles.main}>
         <div className={styles.left}>
@@ -35,8 +39,8 @@ export default function Home() {
         <div className={styles.right}>
           <CelsiusInput celsius={celsius} setCelsius={setCelsius} />
         </div>
-        <div className={styles.totalLeft}>{total.toFixed(2)} Celsius</div>
-        <div className={styles.totalRight}>{ftotal.toFixed(2)} Farenheit</div>
+        <div className={styles.totalLeft}>{total.toFixed(1)} Celsius</div>
+        <div className={styles.totalRight}>{ftotal.toFixed(1)} Farenheit</div>
       </main>
     </div>
   );

@@ -1,5 +1,11 @@
 import React, { createContext } from "react";
 
-const ConvertCxt = createContext({});
+export const ConvertCxt = createContext(null);
 
-export default ConvertCxt;
+export const CxtProvider = ({ children }) => {
+  const customer = "Chris";
+
+  return (
+    <ConvertCxt.Provider value={{ customer }}>{children}</ConvertCxt.Provider>
+  );
+};
