@@ -1,5 +1,5 @@
 import "../styles/globals.css";
-import { CxtProvider } from "../context/ConverterContext";
+import CxtProvider from "../context/ConverterContext";
 
 function MyApp({ Component, pageProps }) {
   return (

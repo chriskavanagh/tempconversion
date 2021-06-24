@@ -1,9 +1,18 @@
-import React from "react";
+import { useContext } from "react";
+import { ConvertCxt } from "../context/ConverterContext";
 
 export default function FarenheitInput(props) {
-  const updateField = (e) => {
+  const [farenheit, setFarenheit, ,] = useContext(ConvertCxt);
+  /* const updateField = (e) => {
     props.setFarenheit({
       ...props.farenheit,
+      [e.target.name]: e.target.value,
+    });
+  }; */
+
+  const updateField = (e) => {
+    setFarenheit({
+      ...farenheit,
       [e.target.name]: e.target.value,
     });
   };
@@ -14,7 +23,8 @@ export default function FarenheitInput(props) {
         type="number"
         id="farenheit"
         name="temp"
-        value={props.farenheit.temp}
+        //value={props.farenheit.temp}
+        value={farenheit.temp}
         onChange={updateField}
         style={{ borderBottomWidth: "0px" }}
       />

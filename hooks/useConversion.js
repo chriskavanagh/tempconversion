@@ -1,13 +1,9 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
+import { ConvertCxt } from "../context/ConverterContext";
 
 export default function useConversion(fa, ce) {
   const [total, setTotal] = useState(0);
   const [ftotal, setFtotal] = useState(0);
-
-  /* const { farenheit, celsius } = useContext(ConvertCxt);
-  console.log(farenheit); */
-
-  //const { temp } = props.farenheit;
 
   function toCelsius(f) {
     const x = f - 32;
