@@ -12,8 +12,12 @@ export const CxtProvider = ({ children }) => {
     scale: "c",
   });
 
+  const [name, setName] = useState("Chris");
+
   return (
-    <ConvertCxt.Provider value={[farenheit, setFarenheit, celsius, setCelsius]}>
+    <ConvertCxt.Provider
+      value={[farenheit, setFarenheit, celsius, setCelsius, name, setName]}
+    >
       {children}
     </ConvertCxt.Provider>
   );

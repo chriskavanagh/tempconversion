@@ -23,10 +23,9 @@ export default function CelsiusInput(props) {
         type="number"
         id="celsius"
         name="temp"
-        //value={props.celsius.temp}
         value={celsius.temp}
         onChange={updateField}
-        style={{ borderBottomWidth: "0px" }}
+        style={{ borderBottomWidth: "0px", appearance: "textfield" }}
       />
     </div>
   );

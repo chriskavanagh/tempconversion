@@ -9,11 +9,11 @@
 }
 .main {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 170px 170px;
   column-gap: 8px;
 }
 .left {
-  place-self: end;
+  place-self: start;
 }
 .right {
   place-self: start;
@@ -22,9 +22,9 @@
   place-self: start;
   border: 2px rgb(150, 149, 149) solid;
   border-top-style: none;
-  padding: 3px;
+  padding: 4px;
   font-size: 12px;
-  width: 148.5px;
+  width: 150px;
   text-align: left;
   color: brown;
   background-color: rgb(250, 245, 245);
@@ -33,10 +33,10 @@
   place-self: start;
   border: 2px rgb(150, 149, 149) solid;
   border-top-style: none;
-  padding: 3px;
+  padding: 4px;
   font-size: 12px;
   color: brown;
-  width: 148.5px;
+  width: 150px;
   text-align: left;
   background-color: rgb(250, 245, 245);
 }

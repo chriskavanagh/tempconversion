@@ -20,13 +20,13 @@ export default function FarenheitInput(props) {
     <div>
       <p>To Celsius</p>
       <input
+        className="input"
         type="number"
         id="farenheit"
         name="temp"
-        //value={props.farenheit.temp}
         value={farenheit.temp}
         onChange={updateField}
-        style={{ borderBottomWidth: "0px" }}
+        style={{ borderBottomWidth: "0px", appearance: "textfield" }}
       />
     </div>
   );
