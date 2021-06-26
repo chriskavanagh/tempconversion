@@ -1,6 +1,6 @@
 html,
 body {
-  background-color: rgb(141, 141, 141);
+  background-color: #f1e9e5;
 }
 
 *,
@@ -12,4 +12,7 @@ body {
 a {
   color: inherit;
   text-decoration: none;
+}
+p {
+  color: #123c69;
 }
