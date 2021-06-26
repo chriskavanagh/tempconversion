@@ -2,7 +2,7 @@ import { useContext } from "react";
 import { ConvertCxt } from "../context/ConverterContext";
 
 export default function FarenheitInput(props) {
-  const [farenheit, setFarenheit, ,] = useContext(ConvertCxt);
+  const { farenheit, setFarenheit } = useContext(ConvertCxt);
   /* const updateField = (e) => {
     props.setFarenheit({
       ...props.farenheit,

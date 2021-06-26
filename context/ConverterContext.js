@@ -16,7 +16,7 @@ export const CxtProvider = ({ children }) => {
 
   return (
     <ConvertCxt.Provider
-      value={[farenheit, setFarenheit, celsius, setCelsius, name, setName]}
+      value={{ farenheit, setFarenheit, celsius, setCelsius, name, setName }}
     >
       {children}
     </ConvertCxt.Provider>

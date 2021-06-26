@@ -7,8 +7,7 @@ import { ConvertCxt } from "../context/ConverterContext";
 import FarenheitInput from "../components/FarenheitInput";
 
 export default function Home() {
-  const [farenheit, setFarenheit, celsius, setCelsius, name, setName] =
-    useContext(ConvertCxt);
+  const { farenheit, celsius, name } = useContext(ConvertCxt);
 
   // temp conversion hook
   const [total, ftotal] = useConversion(farenheit.temp, celsius.temp);
